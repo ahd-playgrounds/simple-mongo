@@ -1,0 +1,8 @@
+/* this config exists for tests and IDE lang-servers to view all files */
+{
+    "extends": "./tsconfig.base.json",
+    "include": [
+        "src/**/*.ts",
+        "test/**/*.ts"
+    ]
+}
