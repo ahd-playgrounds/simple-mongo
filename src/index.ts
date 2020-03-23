@@ -1,6 +1,7 @@
 import express from 'express';
 import http from 'http';
 import socket from 'socket.io';
+import './db';
 
 const app = express();
 const server = http.createServer(app);
@@ -16,6 +17,7 @@ io.on('connection', (sock) => {
   });
 });
 
-server.listen(3000, function () {
-  console.log('listening on *:3000');
+const PORT = parseInt(process.env.NODE_PORT || '8080');
+server.listen(PORT, function () {
+  console.log(`listening on *:${PORT}`);
 });
